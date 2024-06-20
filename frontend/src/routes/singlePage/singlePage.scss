@@ -1,0 +1,201 @@
+@import "../../responsive.scss";
+
+.singlePage {
+    display: flex;
+    height: 100%;
+
+    @include md {
+        flex-direction: column;
+        overflow-y: scroll;
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+        /* Width of the entire scrollbar */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+        /* Color of the scrollbar handle */
+        border-radius: 10px;
+        /* Roundness of the scrollbar handle */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+        /* Color of the scrollbar handle on hover */
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        /* Color of the scrollbar track */
+        border-radius: 10px;
+        /* Roundness of the scrollbar track */
+    }
+
+    .details {
+        flex: 3;
+        height: 100%;
+        overflow-y: scroll;
+
+        @include md {
+            flex: none;
+            height: max-content;
+            margin-bottom: 50px;
+
+        }
+
+
+
+        .wrapper {
+            padding-right: 50px;
+
+            .info {
+                margin-top: 50px;
+
+                .top {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    .post {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        h1 {
+                            font-weight: 400;
+                        }
+
+                        .address {
+                            display: flex;
+                            gap: 5px;
+                            align-items: center;
+                            color: #888;
+                            font-size: 14px;
+
+                            img {
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+
+                        .type {
+                            padding: 5px;
+                            background-color: rgba(254, 205, 81, 0.438);
+                            width: max-content;
+                            border-radius: 5px;
+                            font-size: 20px;
+                            font-weight: 300;
+                        }
+                    }
+
+                }
+
+                .bottom {
+                    margin-top: 50px;
+                    margin-bottom: 50px;
+                    color: #555;
+                    line-height: 20px;
+                }
+            }
+
+
+        }
+    }
+
+    .features {
+        flex: 2;
+        background-color: #fcf5f3;
+        height: 100%;
+        overflow-y: scroll;
+
+        @include md {
+            flex: none;
+            height: max-content;
+            margin-bottom: 50px;
+        }
+
+        .wrapper {
+
+
+            padding: 0px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+
+            .title {
+                font-weight: bold;
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            .feature {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                img {
+                    background-color: rgba(254, 205, 81, 0.209);
+                }
+
+
+            }
+
+            .listVertical {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 10px 10px;
+                background-color: white;
+                border-radius: 10px;
+            }
+
+            .mapContainer {
+                width: 100%;
+                height: 200px;
+            }
+
+            .buttons {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 50px;
+                width: 100%;
+                justify-content: flex-end;
+                position: relative;
+
+                button {
+                    padding: 20px;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    background-color: white;
+                    border: 1px solid #fece51;
+                    border-radius: 5px;
+                    cursor: pointer;
+
+                    img {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+
+                .error {
+                    margin-top: 10px;
+                    color: red;
+                    width: 100%;
+                    text-align: right; // Aligns the text to the right to match the button position
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,137 @@
+@import "../../responsive.scss";
+
+.profilePage {
+    display: flex;
+    height: 100%;
+
+    ::-webkit-scrollbar {
+        width: 6px;
+        /* Width of the entire scrollbar */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+        /* Color of the scrollbar handle */
+        border-radius: 10px;
+        /* Roundness of the scrollbar handle */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+        /* Color of the scrollbar handle on hover */
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        /* Color of the scrollbar track */
+        border-radius: 10px;
+        /* Roundness of the scrollbar track */
+    }
+
+    .details {
+        flex: 3;
+        overflow-y: scroll;
+        padding-bottom: 50px;
+
+
+
+        .wrapper {
+            padding-right: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .title {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                h1 {
+                    font-weight: 300;
+
+                }
+
+                button {
+                    width: 140px;
+                    font-weight: bold;
+                    padding: 10px 20px;
+                    background-color: #fece51;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    border: none;
+                }
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                }
+
+                button {
+                    width: 140px;
+                    font-weight: bold;
+                    background-color: #fece51;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    color: black;
+                    cursor: pointer;
+                }
+
+                .deleteDiv {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: end;
+
+                    .delete {
+                        font-weight: bold;
+                        width: 140px;
+                        background-color: red;
+                        border: none;
+                        padding: 10px 20px;
+                        border-radius: 5px;
+                        color: white;
+                        cursor: pointer;
+    
+                    }
+                }
+
+
+
+
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .rightContainer {
+        flex: 2;
+        background-color: #fcf5f3;
+        height: 100%;
+
+        @include sm {
+            display: none;
+        }
+
+        @include md {
+            display: none;
+        }
+
+        .wrapper {
+            padding: 0px 20px;
+        }
+    }
+}
